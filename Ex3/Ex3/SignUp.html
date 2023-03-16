@@ -4,12 +4,12 @@
         <title>SignUp</title>
         <script>
             function SignUp() {
-                var na = document.forms["SignUp"]["name"].value;
-                var da = document.forms["SignUp"]["date"].value;
-                var em = document.forms["SignUp"]["email"].value;
-                var ge = document.forms["SignUp"]["gender"].value;
-                var ph = document.forms["SignUp"]["phone"].value;
-                var pa = document.forms["SignUp"]["pwd"].value;
+                var na = document.forms["Signup"]["name"].value;
+                var da = document.forms["Signup"]["date"].value;
+                var em = document.forms["Signup"]["email"].value;
+                var ge = document.forms["Signup"]["gender"].value;
+                var ph = document.forms["Signup"]["phone"].value;
+                var pa = document.forms["Signup"]["pwd"].value;
                 if (na == "" && da == "" && em == "" && ge == "" && ph == "" && pa == "") {
                 alert("Enter Details");
                 return false;
@@ -52,7 +52,7 @@
         </style>
     </head>
     <body bgcolor="skyblue">
-        <form name="Register" onsubmit="return registeration()">
+        <form name="SignUp" onsubmit="return SignUp()">
         <center>
             <h1>SignUp</h1>
             <br>
