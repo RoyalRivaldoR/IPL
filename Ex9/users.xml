@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user id="1">
+    <name>Royal          -              oneplus</name>
+    <email>royal@gamil.com</email>
+    <address>
+      <street>north street</street>
+      <city>Nagercoil</city>
+      <state>TamilNadu</state>
+      <zip>2332</zip>
+    </address>
+  </user>
+  <user id="2">
+    <name>Rivaldo          -              iphone14</name>
+    <email>rivaldo@gmail.com</email>
+    <address>
+      <street>south street</street>
+      <city>chennai</city>
+      <state>TamilNaduA</state>
+      <zip>2332</zip>
+    </address>
+  </user>
+  <user id="3">
+    <name>Dillon          -              iphone12</name>
+    <email>dillon@gmail.com</email>
+    <address>
+      <street>123hh street</street>
+      <city>Tirunelveli</city>
+      <state>TamilNadu</state>
+      <zip>2332</zip>
+    </address>
+  </user>
+  <user id="4">
+    <name>John          -              ipad</name>
+    <email>john@example.com</email>
+    <address>
+      <street>47 aayy Street</street>
+      <city>Valliyur</city>
+      <state>Tamilnadu</state>
+      <zip>2332</zip>
+    </address>
+  </user>
+  <user id="5">
+    <name>Rajan          -              hplaptop</name>
+    <email>rajan@gmail.com</email>
+    <address>
+      <street>657 ghj street</street>
+      <city>Kanyakumari</city>
+      <state>TamilNadu</state>
+      <zip>2332</zip>
+    </address>
+  </user>
+  </users>
