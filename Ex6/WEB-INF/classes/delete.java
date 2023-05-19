@@ -13,16 +13,16 @@ public class delete extends HttpServlet {
         Statement stmt = null;
         PrintWriter out = response.getWriter();
 
-        String name = request.getParameter("name");
+        String customername = request.getParameter("customername");
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gadget", "root", "");
             stmt = conn.createStatement();
 
             String sql = "DELETE FROM studentDB WHERE name = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, name);
+            pstmt.setString(1, customername);
             int rowsAffected = pstmt.executeUpdate();
 
             // Display the number of rows affected by the DELETE statement

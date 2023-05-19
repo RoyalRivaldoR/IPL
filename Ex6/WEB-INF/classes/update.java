@@ -12,18 +12,18 @@ public class update extends HttpServlet {
         Statement stmt = null;
         PrintWriter out = response.getWriter();
         // Get the customer name as input from the user
-        String name = request.getParameter("name");
-        String marks = request.getParameter("marks");
+        String customername = request.getParameter("customername");
+        String discount = request.getParameter("discount");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gadget", "root", "");
             if (conn != null) {
                 out.println("<h1> Connection established successfully </h1>");
             }
             stmt = conn.createStatement();
 
             // Update the contact information of the customer with the given name
-            String sql = "UPDATE studentDB SET marks='" + marks + "' WHERE name='" + name + "'";
+            String sql = "UPDATE gadgetdb SET marks='" + discount + "' WHERE name='" + customername + "'";
             int rowsAffected = stmt.executeUpdate(sql);
             if (rowsAffected > 0) {
                 out.println("<h2> Customer contact updated successfully </h2>");

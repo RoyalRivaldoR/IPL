@@ -14,21 +14,21 @@ public class create extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String id = request.getParameter("id");
-        String name = request.getParameter("name");
-        String dept = request.getParameter("dept");
-        String marks = request.getParameter("marks");
+        String customername = request.getParameter("customername");
+        String gadgetname = request.getParameter("gadgetname");
+        String discount = request.getParameter("discount");
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gadget", "root", "");
             stmt = conn.createStatement();
 
-            String sql = "INSERT INTO studentDB(id,name,dept,marks) values(?,?,?,?)";
+            String sql = "INSERT INTO gadgetdb(id,customername,gadgetname,discount) values(?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, id);
-            pstmt.setString(2, name);
-            pstmt.setString(3, dept);
-            pstmt.setString(4, marks);
+            pstmt.setString(2, customername);
+            pstmt.setString(3, gadgetname);
+            pstmt.setString(4, discount);
             int rowsAffected = pstmt.executeUpdate();
 
             // Display the number of rows affected by the DELETE statement

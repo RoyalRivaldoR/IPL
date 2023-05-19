@@ -9,43 +9,43 @@
 </head>
 
 <body style="background-color: bisque;">
-    <h2>Create student profile</h2>
+    <h2>Customer profile</h2>
     <hr>
     <form action="./create" method="post">
         <label for="id">ID:</label>
         <input type="text" id="id" name="id"><br>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
+        <label for="customername">Customer Name:</label>
+        <input type="text" id="customername" name="customername"><br>
 
-        <label for="dept">Department</label>
-        <input type="text" id="dept" name="dept"><br>
+        <label for="gadgetname">Gadget Name:</label>
+        <input type="text" id="gadgetname" name="gadgetname"><br>
 
-        <label for="marks">Marks</label>
-        <input type="text" id="marks" name="marks"><br>
+        <label for="discount">Discount:</label>
+        <input type="text" id="discount" name="discount"><br>
         <br>
         <input type="submit" value="Submit">
     </form>
 
     <br>
-    <h2>Display student details</h2>
+    <h2>Display Customer details</h2>
     <hr>
-      <a href="./display">Click here to display student details</a>
+      <a href="./display">Click here to display Customer details</a>
     <hr>
     <br>
     <h2>Update details</h2>
     <hr>
     <form method="get" action="./update">
-        Name:<input type="text" name="name"></input><br>
-         Marks:<input type="text" name="marks"></input><br><br>
+        Customer Name:<input type="text" name="customername"></input><br>
+        Discount:<input type="text" name="discount"></input><br><br>
         <input type="submit" value="Submit"></input>
     </form>
     <br>
     <h2>Delete details</h2>
     <hr>
     <form action="./delete" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <label for="customername">Customer Name:</label>
+        <input type="text" id="customername" name="customername"><br><br>
         <input type="submit" value="Delete">
     </form>
 

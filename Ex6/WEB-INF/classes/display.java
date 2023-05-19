@@ -13,27 +13,27 @@ public class display extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/gadget", "root", "");
             if (conn != null) {
                 out.println("<h1> Connection established successfully </h1>");
             }
             stmt = conn.createStatement();
 
             // Update the contact information of the customer with the given name
-            String sql = "Select * from studentDB";
+            String sql = "Select * from gadgetdb";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 // Retrieve by column name
                 String id = rs.getString("id");
-                String name = rs.getString("name");
-                String dept = rs.getString("dept");
-                String marks = rs.getString("marks");
+                String customername = rs.getString("customername");
+                String gadgetname = rs.getString("gadgetname");
+                String discount = rs.getString("discount");
                 // Display values
                 out.println("<p> ID: " + id + "<br>");
-                out.println("Name: " + name + "<br>");
-                out.println("Department: " + dept + "<br>");
-                out.println("Marks: " + marks + " %<br></p>");
+                out.println("customername: " + customername + "<br>");
+                out.println("gadgetname: " + gadgetname + "<br>");
+                out.println("discount: " + discount + " %<br></p>");
             }
             out.println("</body></html>");
             rs.close();
